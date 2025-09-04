@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPSD API</title>
+    <link rel="icon" href="/icon.png" id="" />
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Optional: Font Awesome for icons (Optional) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+
+        const app = initializeApp(data);
+
+        import { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
+        const provider = new GoogleAuthProvider();
+        const auth = getAuth(app);
+       
+
+        document.getElementById("googleBtn").addEventListener("click", () => {
+            const provider = new GoogleAuthProvider();
+            const auth = getAuth();
+            signInWithPopup(auth, provider)
+            .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+            const profile = [
+                result.user.email,result.user.displayName,result.user.emailVerified,result.user.accessToken
+            ]
+            console.log(profile)
+            // console.log( result.user.stsTokenManager.refreshToken)
+            // getFirebaseToken(result.user.accessToken)
+            }).catch((error) => {
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+        });
+
+        // import { initializeApp } from "https://connect.facebook.net/en_US/sdk.js";
+        window.fbAsyncInit = function() {
+        FB.init({
+                appId: 'jpsd-fb', // Replace with your Facebook app ID
+                cookie: true,
+                xfbml: true,
+                version: 'v12.0'
+            });
+        };
+        document.getElementById("fbBtn").addEventListener("click", () => {
+            const fbprovider = new FacebookAuthProvider();
+            const auth = getAuth();
+            signInWithPopup(auth, fbprovider)
+            .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = fbprovider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            // IdP data available using getAdditionalUserInfo(result)
+            // ...
+
+            console.log(credential.accessToken , 'no data')
+            // getFirebaseToken(result.user.accessToken)
+            }).catch((error) => {
+                console.log(error)
+                // Handle Errors here.
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // The email of the user's account used.
+                const email = error.customData.email;
+                // The AuthCredential type that was used.
+                const credential = GoogleAuthProvider.credentialFromError(error);
+                // ...
+            });
+        });
+    </script>
+    
+     
+  <!-- Hero Section -->
+    <section class="bg-primary text-white text-left py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="display-4">Hello, It's Me<br><b>Jomer P. San Diego Jr.</b></h1>
+                    <h3 class="text-seacondary">And I'm a <b>Fullstack Web Developer</b></h3>
+                    <p class="lead">Powered by JWT Token | ExpressJS | PostgreSQL | Bootstrap 4 | GitHub.</p>
+                
+                
+                    <a href="#features" class="btn btn-light btn-lg text-primary">Learn More</a>
+                    <a href="mailto:jomersan0619@gmail.com" class="btn btn-light text-primary  btn-lg"><i class="fab fa-google"></i></a>
+                </div>
+                <div class="col-md-4 text-center pt-4">
+                    <img src="/icon.png" alt="image_description" width="200" height="200">
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+
+  <!-- Features Section -->
+    <section id="features" class="py-5">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 btn btn-flat">
+                    <span class="fas fa-cloud  fa-4x mb-3"></span>
+                    <h3>Firebase</h3>
+                    <p class=""><b><button class="btn btn-sm btn-primary" id="googleBtn"><i class="fas fa-envelope"></i> Login as Gmail</button>
+                        <b><button class="btn btn-sm btn-primary" id="fbBtn"><i class="fab fa-facebook"></i>  Facebook</button></b></p>
+                    <p class=""></b></p>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <a class="btn btn-flat" href="https://github.com/jpsandiego22/jpsd-express-api" target="_blank">
+                        <i class="fab fa-github fa-4x mb-3"></i>
+                        <h3>Repository</h3>
+                        <p class="">A <b>RESTful API</b> built with <b>Node.js</b> for managing Portfolio Information.<br><br> Some sensitive credential may not be included in the package due to the security purposes</p>
+                    </a>
+                </div>
+                <div class="col-md-4 btn btn-flat">
+                <i class="fas fa-rocket fa-4x mb-3"></i>
+                <h3>API's</h3>
+                <p>Experience API's to boost your productivity and efficiency powered by JSON.</p>
+                <!-- <p class="text-left pl-2">
+                    Feature: Add, Update, Delete, Get Data.
+                    <br>
+                    1. Users Information Api<br>
+                    2. Users Biography API <br>
+                    3. Users Education API<br>
+                    4. Career History API <br>
+                    5. Skills & Application API <br>
+                    6. Users Portfolio API <br>
+                    7. Get Complete Data in JSON Format
+                </p> -->
+                </div>
+                <div class="col-md-4 btn btn-flat">
+                    <i class="fas fa-shield-alt fa-4x mb-3"></i>
+                    <h3>Security</h3>
+                    <p>Security and privacy are top priorities with our service with the use of <b>JWT Token</b>.</p>
+                </div>
+            </div>
+            <div class="clearfix"><br></div>
+            <div class="row text-center">
+                <div class="col-md-2"></div>
+                <div class="col-md-4">
+                    <i class="fab fa-chrome fa-4x mb-3"></i>
+                    <h3>Portfolio Website</h3>
+                    <p><b>Coming Soon</b>.</p>
+                </div>
+            
+                <div class="col-md-4">
+                    <i class="fab fa-android fa-4x mb-3"></i>
+                    <h3>Android APK</h3>
+                    <p><b>Coming Soon</b>.</p>
+                </div>
+
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Call to Action Section -->
+  <section class="bg-dark text-white text-center py-5">
+    <div class="container">
+      <h2 class="display-4">Get in touch</h2>
+      <p class="lead">Have any questions? I'd love to hear from you. </p>
+      <a href="#contact" class="btn btn-light btn-lg"><i class="fas fa-envelope-square"></i> Send me an email</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-light text-center py-4">
+    <div class="container">
+      <p class="mb-0">© 2025 [JPSD]. All Rights Reserved.</p>
+      <p>
+        <p class="text-primary">© Copyright 2025. All contents cannot be reproduced without the written consent from JPSD.</p>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 4 JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/js/script.js"></script>
+
+</body>
+</html>

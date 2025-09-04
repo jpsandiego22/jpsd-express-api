@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="img/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPSD</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jpsd-profile.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+<body class="body-jpsd">
+
+    <div class="grid-bg"></div>
+    <div class="gradient-overlay"></div>
+    <div class="scanlines"></div>
+
+    <div class="shapes-container">
+        <div class="shape shape-circle"></div>
+        <div class="shape shape-triangle"></div>
+        <div class="shape shape-square"></div>
+    </div>
+
+    <div id="particles"></div>
+
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <svg class="logo-svg" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#FF5E00;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#00B2FF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <polygon points="20,2 38,14 38,26 20,38 2,26 2,14" fill="none" stroke="url(#logoGradient)" stroke-width="2"/>
+                    <polygon points="20,8 32,16 32,24 20,32 8,24 8,16" fill="url(#logoGradient)" opacity="0.3"/>
+                    <circle cx="20" cy="20" r="3" fill="url(#logoGradient)"/>
+                </svg>
+                <span class="logo-text">JPSD</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MODULE -->
+    <!-- HOME -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            
+            <div class="text-rotator">
+                
+                <div class="text-set active">
+                    
+                    <h1 class="glitch-text" data-text="Hello, I'm Jomer">Hello, I'm Jomer</h1>
+    
+                    <p class="subtitle subtitle-align">FULLSTACK WEB DEVELOPER</p>
+                    <h1 class="glitch-text-btn  ">
+                        <a href="#contact" target="_blank" rel="noopener" class="btn btn-lg cta-button cta-primary my-2"><i class="fab fa-google"></i></a>
+                        <a href="https://wa.me/639306805240?" class="btn btn-lg cta-button cta-primary my-2" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/jpsandiego22" targe="_blank" class="btn btn-lg cta-button cta-primary my-2"><i class="fab fa-github"></i></a>
+                        <a href="https://m.me/jpsandiego22?ref=Hi%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20message%20you." target="_blank" rel="noopener" class="btn btn-lg cta-button cta-primary my-2"><i class="fab fa-facebook-messenger"></i></a>
+    
+                    </h1>
+                    <p class="subtitle"></p>
+                </div>
+                
+                
+            </div>
+            
+        </div>
+        
+        <div class="cta-container">
+            <a href="#about" class="cta-button cta-secondary">Learn More</a>
+        </div>
+    </section>
+    
+    <!-- HOME -->
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <h2 class="section-title">About Me</h2>
+        <h3>Fullstack Web Development</h3>
+        <div class="about-container">
+            <div class="feature-tabs">
+                <div class="tab-item active" data-tab="information">
+                    <span class="tab-icon">🪪</span>
+                    <span>Information</span>
+                </div>
+                <div class="tab-item" data-tab="skills">
+                    <span class="tab-icon">🔧</span>
+                    <span>Skills</span>
+                </div>
+                <div class="tab-item" data-tab="applications">
+                    <span class="tab-icon">💻</span>
+                    <span>Other Useful Applications</span>
+                </div>
+            </div>
+            <div class="feature-content">
+                <div class="feature-content-info content-panel active" id="information">
+                    <h3>INFORMATION</h3>
+                    <ul class="feature-list">
+                        <li>Name: <b>Jomer P. San Diego Jr.</b></li>
+                        <li>Email: <b>jomersan0619@gmail.com</b></li>
+                        <li>Location: <b>Rodriguez, Rizal, PH</b></li>
+                        
+                        <li>Education: <b>B.S. INFORMATION TECHNOLOGY</b><br><i>Colegio De Montalban 2011-2012</i></li>
+
+                    </ul>
+                </div>
+                <div class="content-panel" id="skills">
+                    <h3 class="feature-content-info">SKILLS</h3>
+                    <p class="feature-content-info">Sometimes passion blooms as you dive deeper. Imagine learning "Web Development", then suddently understand how website works. - <i> it's like opening a treasure chest of digital secrets!</i></p>
+                    <div class="about-container-2">
+                        <div class="skills-form">
+                            <h5>Frameworks & Libraries</h5>
+                            <ul class="feature-list">
+                                <li>Laravel (PHP)</li>
+                                <li>CodeIgniter (PHP)</li>
+                                <li>NextJS </li>
+                            </ul>
+                            <h5>Web Development</h5>
+                            <ul class="feature-list">
+                                <li>HTML5, CSS3, SASS/SCSS</li>
+                                <li>Bootstrap / Tailwind CSS</li>
+                                <li>React.js / Vue.js</li>
+                                <li>jQuery (legacy support)</li>
+                                <li>Node.js / Express.js</li>
+                                <li>RESTful APIs</li>
+                                <li>Postman / API testing</li>
+                            </ul>
+                        </div>
+                        <div class="skills-form">
+                            <h5>Database & Storage</h5>
+                            <ul class="feature-list">
+                                <li>MySQL / PostgreSQL</li>
+                                <li>Oracle Database</li>
+                                <li>Microsoft SQL</li>
+                                <li>MongoDB / NoSQL</li>
+                                <li>SQLite</li>
+                            </ul>
+                            <h5>DevOps & Cloud Platforms</h5>
+                            <ul class="feature-list">
+                                <li>Git / GitHub / GitLab / Bitbucket</li>
+                                <li>Docker</li>
+                                <li>AWS (Amazon Web Services)</li>
+                                <li>Linux / Shell scripting</li>
+                                <li>Vercel</li>
+                                <li>Render</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-panel" id="applications">
+                    <h3>OTHER USEFUL APPLICATIONS</h3>
+                    <p>Experienced in integrating productivity, collaboration, and virtualization tools to drive innovation and efficiency in software development.</p>
+                    <ul class="feature-list">
+                        <li><b>Office & Productivity:</b> Microsoft Office (Word, Excel, PowerPoint, Outlook), Google Workspace (Docs, Sheets, Slides, Drive)</li>
+                        <li><b>Communication & Collaboration:</b> Microsoft Teams, Zoom, Google Meet, Discord</li>
+                        <li><b>File Management & Storage:</b> Dropbox, Google Drive, OneDrive</li>
+                        <li><b>Virtualization & System Tools:</b> VMware Workstation, VirtualBox, Docker Desktop, WSL (Windows Subsystem for Linux)</li>
+                        <li><b>Utilities & Development Tools:</b> Terminal/Bash/PowerShell, FileZilla, PuTTY, WinSCP, Snipping Tool</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Second row with reversed layout -->
+        <div class="about-content-2" style="margin-top: 80px;">
+            <div class="about-visual">
+                <div class="about-graphic-alt">
+                    <div class="hexagon"></div>
+                    <div class="hexagon"></div>
+                    <div class="hexagon"></div>
+                </div>
+            </div>
+            <div class="about-text">
+                <h2>Innovation at Every Level</h2>
+                <p>Results-driven software developer with expertise in full-stack development, database management, and cloud technologies. Skilled in designing scalable solutions, optimizing system performance, and collaborating in cross-functional teams. Recognized for driving innovation at every level of the development lifecycle, from initial design to deployment and maintenance. Adept at leveraging modern tools, frameworks, and methodologies to deliver high-quality, user-focused applications.</p>
+            </div>
+        </div>
+    </section>
+    <!-- ABOUT -->
+    <!-- RESUME  -->
+    <section class="resume" id="resume">
+        <h2 class="section-title">Resume</h2>
+        <h3>RELEVANT EXPIRIENCE</h3>
+        <div class="about-content-2">
+            <div class="about-text">
+                <h3 class="text-left">AEON CREDIT SERVICE SYSTEMS PHILIPPINES, Inc</h3>
+                <p class="mb-20">Unit 1101 and 1102, Citynet Central No. 298 B, EDSA corner Sultan Street Brgy. Highway Hills, Mandaluyong City</p>
+                <p class="mt-20"><b>Position:</b> Senior Software Engineer I
+                <br><b>Date:</b> November 2022 <b>(up to present)</b></p>
+              
+            </div>
+            <div class="about-visual">
+                <img src="/img/aeon.png"  alt="Aeon Logo">
+            </div>
+        </div>
+        <div class="about-content-2 border border-bottom-1 my-5"></div>
+         <div class="about-content-2">
+            <div class="about-text">
+                <h3 class="text-left">CARITAS HEALTH SHIELD, Inc</h3>
+                <p class="mb-20">Caritas Health Shield Building, Eulogio Rodriguez Sr. Ave, Quezon City</p>
+                <p class="mt-20"><b>Position:</b> Team Lead 
+                <br><b>Date:</b> July 2018 to November 2022</p>
+              
+            </div>
+            <div class="about-visual">
+                <img src="/img/caritas.png"  alt="Caritas Logo">
+            </div>
+        </div>
+        <div class="about-content-2 border border-bottom-1 my-5"></div>
+         <div class="about-content-2">
+            <div class="about-text">
+                <h3 class="text-left">PREMIUMBIKES CORP.</h3>
+                <p class="mb-20">#4 Albany St., Corner Aurora Blvd., G/F PICE Bldg., Cubao, Quezon City</p>
+                <p class="mt-20"><b>Position:</b> Programmer
+                <br><b>Date:</b> July 2013 to November 2018</p>
+              
+            </div>
+            <div class="about-visual">
+                <img src="/img/premiumbikes.jpg"  alt="Caritas Logo">
+            </div>
+        </div>
+        <div class="about-content-2 border border-bottom-1 my-5"></div>
+         <div class="about-content-2">
+            <div class="about-text">
+                <h3 class="text-left">PEOPLE'S TELEVISION NETWORK, INC.</h3>
+                <p class="mb-20">Broadcast Complex, Visayas Avenue, Diliman, 1100 Quezon City, Philippines</p>
+                <p class="mt-20"><b>Position:</b> VB.NET Programmer (Project Based) 
+                <br><b>Date:</b> January to December 2013</p>
+              
+            </div>
+            <div class="about-visual">
+                <img src="/img/ptv.png"  alt="Caritas Logo">
+            </div>
+        </div>
+    </section>
+    <!-- RESUME -->
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <h2 class="section-title">PORTFOLIO</h2>
+       <div class="hero-content">
+           <div class="row">
+               <div class="col-md-12">
+                   <div class="row">
+                       <div class="col-md-4 my-2">
+                           <div class="col-md-12 zoom bg-color">
+                               <img src="/img/portfolio/chsi.jpg" alt="Aeon Logo">
+                               <p> Project URL : <a href="https://caritashealthshield.com.ph/"  target="_blank">CHSI Company Website</a><br>
+                               Maintained & Build using the ff:<br>
+                               Laravel v5.5, MariaDB, JQuery, Ajax, JSON, RestAPI</p>
+                           </div>
+                       </div>
+                       <div class="col-md-4 my-2">
+                           <div class="col-md-12 zoom bg-color">
+                               <img src="/img/portfolio/chsi-mis.jpg" alt="Aeon Logo">
+                               <p> Project URL : <a href="https://caritashealthshield.com.ph/caritas_mis/" target="_blank">CHSI Member Information System</a><br>
+                               Maintained & Build using the ff:<br>
+                               Laravel v5.5, MariaDB, JQuery, Ajax, JSON, RestAPI</p>
+                           </div>
+                       </div>
+                       <div class="col-md-4 my-2">
+                           <div class="col-md-12 zoom bg-color">
+                               <img src="/img/portfolio/chsi-proposal.jpg" alt="Aeon Logo">
+                               <p> Project URL : <a href="https://github.com/jpsandiego22/chs_proposal_system" target="_blank">CHSI Proposal System</a><br>
+                               Maintained & Build using the ff:<br>
+                               Laravel v5.5, MariaDB, JQuery, Ajax, JSON, RestAPI</p>
+                           </div>
+                       </div>
+                       <div class="col-md-4 my-2">
+                           <div class="col-md-12 zoom bg-color">
+                               <img src="/img/portfolio/issabelPBX.jpg" alt="Aeon Logo">
+                               <p>AEON Vietnam</p>
+                               <p> Project URL : <a href="https://www.issabel.org/get-issabel/" target="_blank"> Predictive Dialing System</a><br>
+                               Modification of Issabel PBX Module (CampaignOut, CallsReports, Setup Extensions, Queuee Configuration, Callback Extensions & API Integration)</p>
+                           </div>
+                        </div>
+                        <div class="col-md-4 my-2">
+                            <div class="col-md-12 zoom bg-color">
+                                <img src="/img/portfolio/aeon-webadmin.jpg" alt="Aeon Logo">
+                                    <p>AEON SPECIALIZED BANK (Cambodia) PLC</p>
+                                <p> Project URL : <a href="#"> N/A</a><br>
+                                Maintained & Build using the ff:<br>
+                                Laravel v5.5, VueJS, MariaDB, JQuery, Ajax, JSON, Integration with a multiple sub-system.</p>
+                            </div>
+                        </div>
+                       <div class="col-md-4 my-2">
+                            <div class="col-md-12 zoom bg-color">
+                                <img src="/img/portfolio/nodejs-expressjs.jpg" alt="Aeon Logo">
+                                    <p>EXPRESSJS CRUD API with JWT BASIC AUTH<br>
+
+                                    Project URL : <a href="/jpsd-api" target="_blank">HOSTED in RENDER</a><br>
+                                    Link : <a href="https://github.com/jpsandiego22/nodeJS-Crud-Jwt-BasicAuth-RestApi" target="_blank">GITHUB LINK</a><br>
+                                    Build using NodeJS, ExpressJS, JSON Web Token & Basic Authorization - CRUD RestAPI.<br><br><br></p>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </section>
+    <!-- PORTFOLIO  -->
+    <!-- CONTACT  -->
+    <section class="contact" id="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                <div id="msg" class="col-md-4 my-2"></div>
+            </div>
+            <div class="contact-info">
+                <h3>Connect With Me</h3>
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div class="info-details">
+                        <h4>Email</h4>
+                        <p>jomersan0619@gmail.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📱</div>
+                    <div class="info-details">
+                        <h4>Contact</h4>
+                        <p>+639306805240</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-details">
+                        <h4>Location</h4>
+                        <p>Rodriguez, Rizal PH</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="photo-bg"></div>
+                    </div>
+                    <div class="map-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACT -->
+    <!-- FOOTER  -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">© 2025 JPSD. All rights reserved. Building tomorrow, today. | Design: JPSD</p>
+        </div>
+    </footer>
+    <!-- FOOTER -->
+    <!-- MODULE -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+<script src="js/jpsd-profile.js"></script>
+  
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
