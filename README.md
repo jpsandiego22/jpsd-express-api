@@ -1,5 +1,5 @@
 # NODEJS Powered by ExpressJS & JWT Auth
-
+# SECONDARY REPOSITORY FOR VIEWING PURPOSES ONLY
 <p align="center">
     <a href="https://nodejs.org/en" target="_blank">
         <img src="https://miro.medium.com/v2/resize:fit:565/0*vq-JSMynSHUPXx70" width="400">
@@ -10,7 +10,9 @@
 
 # Deployed in Render
 ### Feature
-Landing Page: https://jpsd-api.onrender.com/
+
+PORTFOLIO Landing Page: https://jpsd-api.onrender.com/
+API Landing Page: https://jpsd-api.onrender.com/jpsd-api
 - Review the files to get the list of API's created in this repository.
 
 <p align="center">
