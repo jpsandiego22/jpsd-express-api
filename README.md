@@ -1,5 +1,9 @@
+<p align="center">
+    # SECONDARY REPOSITORY FOR VIEWING PURPOSES ONLY
+</p>
+
 # NODEJS Powered by ExpressJS & JWT Auth
-# SECONDARY REPOSITORY FOR VIEWING PURPOSES ONLY
+
 <p align="center">
     <a href="https://nodejs.org/en" target="_blank">
         <img src="https://miro.medium.com/v2/resize:fit:565/0*vq-JSMynSHUPXx70" width="400">
